@@ -19,7 +19,7 @@ from django.http import HttpResponse
 
 
 async def http_call_async():
-    for num in range(1,6):
+    for num in range(1, 6):
         await asyncio.sleep(1)
         print(num)
     async with httpx.AsyncClient() as client:
@@ -28,7 +28,7 @@ async def http_call_async():
 
 
 def http_cal_sync():
-    for num in range(1,6):
+    for num in range(1, 6):
         sleep(1)
         print(num)
     r = httpx.get('https://httpbin.org/')
